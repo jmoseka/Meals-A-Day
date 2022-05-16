@@ -1,4 +1,64 @@
-/* this styke should be removed. It is only for testing */
-body {
-  background: #f08080;
+@import url('https://fonts.googleapis.com/css2?family=Zen+Loop:ital@0;1&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Zen Loop', cursive;
+}
+
+.wrapper{
+  margin: auto;
+  width: 80%;
+  max-height: 800px;
+  overflow: scroll;
+}
+
+.padding-20{
+  padding: 20px;
+}
+
+.header{
+  display: flex;
+  margin: auto;
+  max-width: 100%;
+  border-bottom: 2px solid grey;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  font-size: 25px;
+}
+
+.header ul{
+  display: flex;
+  column-gap: 50px;
+  list-style: none;
+}
+
+.header ul li {
+  cursor: pointer;
+}
+
+.header ul li:hover {
+  text-decoration: underline;
+  color: #743b79;
+}
+
+#logo {
+  margin-right: 20px;
+}
+
+footer {
+  border: 2px solid grey;
+  padding: 30px;
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  font-size: 25px;
+}
+
+footer p a {
+  text-decoration: none;
+  color: #c506dc;
 }
