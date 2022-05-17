@@ -88,6 +88,7 @@ footer p a {
   display: flex;
   column-gap: 20px;
   font-size: 14px;
+  color: #703777;
 }
 
 .comment-btn {
@@ -99,4 +100,8 @@ footer p a {
   background: #713777;
   border-radius: 2px;
   margin-top: 20px;
+}
+
+.material-icons {
+  color: #703777;
 }
