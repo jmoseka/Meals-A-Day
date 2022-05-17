@@ -1,7 +1,6 @@
 const mealsList = document.getElementById('meals-list');
 
 const mealView = async (data) => {
-  console.log(data.length)
   for (let i = 0; i <= data.length - 1; i += 1) {
     const mealDiv = document.createElement('div');
     mealDiv.id = data[i].idMeal;
@@ -22,7 +21,7 @@ const mealView = async (data) => {
     mealName.innerHTML = data[i].strMeal;
 
     const likeBtn = document.createElement('i');
-    likeBtn.innerHTML = `<i class="material-icons">favorite_border</i>`;
+    likeBtn.innerHTML = '<i class="material-icons">favorite_border</i>';
     likeBtn.id = data[i].idMeal;
 
     mealDescription.appendChild(mealName);
@@ -38,7 +37,7 @@ const mealView = async (data) => {
     commentContainer.appendChild(button);
     mealDiv.appendChild(commentContainer);
 
-    mealsList.appendChild(mealDiv)
+    mealsList.appendChild(mealDiv);
   }
 };
 
