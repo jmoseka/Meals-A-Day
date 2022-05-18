@@ -5,7 +5,6 @@ import getLikes from './getLikes.js';
 const mealsList = document.getElementById('meals-list');
 
 const likesCount = (target, likesArray, numOfLikes) => {
-  console.log(target)
   likesArray.forEach((obj) => {
     if (obj.item_id === target.id) {
       numOfLikes.innerHTML = `${obj.likes} likes `;
