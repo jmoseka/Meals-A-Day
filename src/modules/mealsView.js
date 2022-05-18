@@ -2,6 +2,8 @@
 import postLikes from './postLikes.js';
 import getLikes from './getLikes.js';
 import mealsCounter from './mealsCounter.js';
+import openCloseModal from './open-close-modal.js';
+import getPopUpInfo from './getPopUpInfo.js';
 
 const mealsList = document.getElementById('meals-list');
 
@@ -72,6 +74,13 @@ const mealView = async (data) => {
       await postLikes(likeBtn.id);
       const newLikes = await getLikes();
       likesCount(e.target, newLikes, numOfLikes);
+    });
+
+    button.addEventListener('click', () => {
+      openCloseModal();
+      getPopUpInfo(button.id);
+      // getPopUpInfo(button.id);
+      // addComment();
     });
   }
 };

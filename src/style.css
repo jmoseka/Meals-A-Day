@@ -31,6 +31,14 @@
   font-size: 20px;
 }
 
+/* stylint descending specificity */
+.ingredient-list li {
+  width: 80px;
+  height: auto;
+  border: 1px solid gray;
+  text-align: center;
+}
+
 .header ul {
   display: flex;
   column-gap: 50px;
@@ -133,4 +141,118 @@ footer p a {
 
 .meal-likes {
   margin-left: 80px;
+}
+
+/* comment styling */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.modal {
+  border-radius: 5px;
+  border: 2px solid #77407d;
+  padding: 16px;
+  position: fixed;
+  background: white;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  max-height: 95%;
+  overflow: scroll;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-thumb {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.thumbnail-container {
+  width: 300px;
+  height: auto;
+}
+
+.thumbnail-container img {
+  width: 100%;
+}
+
+.modal-close {
+  justify-self: center;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.item-title {
+  text-align: center;
+  padding: 10px;
+}
+
+.item-instructions,
+.instruction-title {
+  text-align: center;
+  padding: 10px;
+}
+
+.ingredient-list {
+  text-align: center;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ingredient-list li img {
+  width: 100%;
+}
+
+/* form style */
+
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+input {
+  padding: 6px;
+  margin-bottom: 5px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+.text-area {
+  font-size: 18px;
+}
+
+.submit-comment-btn {
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 18px;
 }
