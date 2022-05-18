@@ -1,3 +1,5 @@
+import validateCommentSubmission from './validateCommentSubmission.js';
+
 const getPopUpInfo = async (id) => {
   const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
   const response = await fetch(url);
@@ -25,17 +27,16 @@ const getPopUpInfo = async (id) => {
   const instructionText = document.querySelector('.instruction-text');
   const imgThumb = document.querySelector('.img-thumb');
   const ingredientList = document.querySelector('.ingredient-list');
-  ingredientList.classList = 'ingredient-list';
+  const formContainer = document.querySelector('.form-container');
 
   itemTitle.innerHTML = (strMeal);
   instructionText.innerHTML = strInstructions;
-
   imgThumb.innerHTML = `
     <div class="thumbnail-container">
     <img src="${strMealThumb}">
     <div>
     `;
-
+  /** List of ingredients */
   ingredientList.innerHTML = '';
   arrIngredients.forEach((ingredient) => {
     const element = document.createElement('li');
@@ -45,6 +46,20 @@ const getPopUpInfo = async (id) => {
                 `;
 
     ingredientList.appendChild(element);
+  });
+
+  /** form */
+  formContainer.innerHTML = `
+  <form>
+          <input class="name-input" type="text" placeholder="Your name">
+          <textarea class="text-area" cols="30" rows="10">Your insights</textarea>
+          <button class="form-submit" id=${id} type="button">Comment</button>
+          <p class="notice hidden">⛔ Fields cannot be empty</p>
+      </form>
+  `;
+  const formSubmit = document.querySelector('.form-submit');
+  formSubmit.addEventListener('click', () => {
+    validateCommentSubmission(formSubmit.id);
   });
 };
 

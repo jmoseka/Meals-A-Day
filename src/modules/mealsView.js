@@ -79,8 +79,6 @@ const mealView = async (data) => {
     button.addEventListener('click', () => {
       openCloseModal();
       getPopUpInfo(button.id);
-      // getPopUpInfo(button.id);
-      // addComment();
     });
   }
 };
