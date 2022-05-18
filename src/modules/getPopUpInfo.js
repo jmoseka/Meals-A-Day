@@ -36,6 +36,7 @@ const getPopUpInfo = async (id) => {
     <div>
     `;
 
+  ingredientList.innerHTML = '';
   arrIngredients.forEach((ingredient) => {
     const element = document.createElement('li');
     element.innerHTML = `
