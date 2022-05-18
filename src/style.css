@@ -12,6 +12,7 @@
   width: 90%;
   max-height: 800px;
   background: #703777;
+  box-shadow: inset 1px 1px 20px 9px black;
   overflow: scroll;
 }
 
