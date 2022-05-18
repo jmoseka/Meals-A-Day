@@ -1,6 +1,7 @@
 /* eslint-disable no-await-in-loop */
 import postLikes from './postLikes.js';
 import getLikes from './getLikes.js';
+import mealsCounter from './mealsCounter.js';
 
 const mealsList = document.getElementById('meals-list');
 
@@ -13,6 +14,9 @@ const likesCount = (target, likesArray, numOfLikes) => {
 };
 
 const mealView = async (data) => {
+  const mealsCount = document.querySelector('#items-count');
+  mealsCount.innerHTML = mealsCounter(data);
+
   for (let i = 0; i <= data.length - 1; i += 1) {
     const mealDiv = document.createElement('div');
     mealDiv.id = data[i].idMeal;
