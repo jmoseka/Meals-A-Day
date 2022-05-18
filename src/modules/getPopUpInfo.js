@@ -1,4 +1,4 @@
-import validateCommentSubmission from "./validateCommentSubmission.js";
+import validateCommentSubmission from './validateCommentSubmission.js';
 
 const getPopUpInfo = async (id) => {
   const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
@@ -36,10 +36,9 @@ const getPopUpInfo = async (id) => {
     <img src="${strMealThumb}">
     <div>
     `;
-    /** List of ingredients*/
-    ingredientList.innerHTML = '';
+  /** List of ingredients */
+  ingredientList.innerHTML = '';
   arrIngredients.forEach((ingredient) => {
-      
     const element = document.createElement('li');
     element.innerHTML = `
                 <img src="https://www.themealdb.com/images/ingredients/${ingredient}.png">
@@ -49,7 +48,7 @@ const getPopUpInfo = async (id) => {
     ingredientList.appendChild(element);
   });
 
-  /**form */
+  /** form */
   formContainer.innerHTML = `
   <form>
           <input class="name-input" type="text" placeholder="Your name">
@@ -57,10 +56,10 @@ const getPopUpInfo = async (id) => {
           <button class="form-submit" id=${id} type="button">Comment</button>
           <p class="notice hidden">⛔ Fields cannot be empty</p>
       </form>
-  `
+  `;
   const formSubmit = document.querySelector('.form-submit');
   formSubmit.addEventListener('click', () => {
-      validateCommentSubmission(formSubmit.id);
+    validateCommentSubmission(formSubmit.id);
   });
 };
 
