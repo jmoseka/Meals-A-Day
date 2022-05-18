@@ -41,11 +41,6 @@
   cursor: pointer;
 }
 
-.header ul li a {
-  text-decoration: none;
-  color: #c506dc;
-}
-
 .header ul li:hover {
   text-decoration: underline;
   color: #743b79;
@@ -68,6 +63,11 @@ footer {
 }
 
 footer p a {
+  text-decoration: none;
+  color: #c506dc;
+}
+
+.header ul li a {
   text-decoration: none;
   color: #c506dc;
 }
