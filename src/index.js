@@ -7,6 +7,6 @@ const logo = document.getElementById('logo');
 logo.src = Logo;
 
 window.addEventListener('load', async () => {
-  const meals = await getMeals();
-  mealView(meals);
+  // const meals = await getMeals();
+  mealView(await getMeals());
 });

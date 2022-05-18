@@ -9,9 +9,10 @@
 
 .wrapper {
   margin: auto;
-  width: 80%;
+  width: 90%;
   max-height: 800px;
-  background: #ede4f4;
+  background: #703777;
+  box-shadow: inset 1px 1px 20px 9px black;
   overflow: scroll;
 }
 
@@ -74,8 +75,14 @@ footer p a {
   margin: 30px 0 30px 30px;
 }
 
+.meal-div {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 1px 1px 20px 6px black;
+}
+
 .meal-img-div {
-  width: 250px;
+  width: 352px;
 }
 
 .meal-img {
@@ -86,9 +93,9 @@ footer p a {
 
 .meals-description {
   display: flex;
-  column-gap: 20px;
   font-size: 14px;
   color: #703777;
+  column-gap: 10px;
 }
 
 .comment-btn {
@@ -102,6 +109,23 @@ footer p a {
   margin-top: 20px;
 }
 
+.comment-btn:active {
+  transform: translateY(4px);
+}
+
 .material-icons {
   color: #703777;
+  cursor: pointer;
+}
+
+.material-icons:hover {
+  color: #c506dc;
+}
+
+.material-icons:active {
+  transform: translateY(4px);
+}
+
+.meal-likes {
+  margin-left: 80px;
 }
