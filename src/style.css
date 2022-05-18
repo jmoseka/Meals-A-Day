@@ -251,8 +251,10 @@ input {
   font-size: 18px;
 }
 
-.submit-comment-btn {
+.form-submit {
   margin-top: 10px;
-  padding: 5px;
+  padding: 10px;
   font-size: 18px;
+  border: none;
+  background: #703777;
 }
