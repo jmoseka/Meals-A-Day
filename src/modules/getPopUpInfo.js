@@ -1,4 +1,6 @@
 import validateCommentSubmission from './validateCommentSubmission.js';
+import { getComments } from './postComment.js';
+import viewComments from './viewComments.js';
 
 const getPopUpInfo = async (id) => {
   const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
@@ -52,7 +54,7 @@ const getPopUpInfo = async (id) => {
   formContainer.innerHTML = `
   <form>
           <input class="name-input" type="text" placeholder="Your name">
-          <textarea class="text-area" cols="30" rows="10">Your insights</textarea>
+          <textarea class="text-area" cols="30" rows="10" placeholder="Your insights"></textarea>
           <button class="form-submit" id=${id} type="button">Comment</button>
           <p class="notice hidden">⛔ Fields cannot be empty</p>
       </form>
@@ -61,6 +63,10 @@ const getPopUpInfo = async (id) => {
   formSubmit.addEventListener('click', () => {
     validateCommentSubmission(formSubmit.id);
   });
+
+  /** view comments */
+  const commentPosted = await getComments(formSubmit.id);
+  viewComments(commentPosted);
 };
 
 export default getPopUpInfo;
