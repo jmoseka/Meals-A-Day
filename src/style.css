@@ -67,6 +67,11 @@ footer p a {
   color: #c506dc;
 }
 
+.header ul li a {
+  text-decoration: none;
+  color: #c506dc;
+}
+
 .meals {
   display: flex;
   flex-direction: row;
