@@ -39,6 +39,12 @@
   text-align: center;
 }
 
+.comment-list li {
+  list-style: none;
+}
+
+/** end */
+
 .header ul {
   display: flex;
   column-gap: 50px;
@@ -224,12 +230,15 @@ footer p a {
 }
 
 /* comment style */
-.comment-list {
-  font-size: 18px;
+
+.comment-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.comment-list li {
-  list-style: none;
+.comment-list {
+  font-size: 18px;
 }
 
 /* form style */
