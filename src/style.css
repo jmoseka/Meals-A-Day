@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Aladin', cursive;
+}
+
+.wrapper {
+  margin: auto;
+  width: 90%;
+  max-height: 800px;
+  background: #703777;
+  box-shadow: inset 1px 1px 20px 9px black;
+  overflow: scroll;
+}
+
+.padding-20 {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  margin: auto;
+  max-width: 100%;
+  border-bottom: 2px solid #703777;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  font-size: 20px;
+}
+
+/* stylint descending specificity */
+.ingredient-list li {
+  width: 80px;
+  height: auto;
+  text-align: center;
+}
+
+.comment-list li {
+  list-style: none;
+}
+
+/** end */
+
+.header ul {
+  display: flex;
+  column-gap: 50px;
+  list-style: none;
+}
+
+.header ul li {
+  cursor: pointer;
+}
+
+.header ul li:hover {
+  text-decoration: underline;
+  color: #743b79;
+}
+
+#logo {
+  margin-right: 20px;
+  height: 60px;
+  width: 60px;
+}
+
+footer {
+  border: 2px solid #703777;
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  font-size: 20px;
+}
+
+footer p a {
+  text-decoration: none;
+  color: #c506dc;
+}
+
+.header ul li a {
+  text-decoration: none;
+  color: #c506dc;
+}
+
+.meals {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 30px 0 30px 30px;
+}
+
+.meal-div {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 1px 1px 20px 6px black;
+}
+
+.meal-img-div {
+  width: 352px;
+}
+
+.meal-img {
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid #77407d;
+}
+
+.meals-description {
+  display: flex;
+  font-size: 14px;
+  color: #703777;
+  column-gap: 10px;
+}
+
+.comment-btn {
+  width: 100%;
+  font-size: 26px;
+  border: 0;
+  padding: 10px;
+  color: #fff;
+  background: #713777;
+  border-radius: 2px;
+  margin-top: 20px;
+}
+
+.comment-btn:active {
+  transform: translateY(4px);
+}
+
+.material-icons {
+  color: #703777;
+  cursor: pointer;
+}
+
+.material-icons:hover {
+  color: #c506dc;
+}
+
+.material-icons:active {
+  transform: translateY(4px);
+}
+
+.meal-likes {
+  margin-left: 80px;
+}
+
+/* comment styling */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.modal {
+  border-radius: 5px;
+  border: 2px solid #77407d;
+  padding: 16px;
+  position: fixed;
+  background: white;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  max-height: 95%;
+  overflow: scroll;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-thumb {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.thumbnail-container {
+  width: 300px;
+  height: auto;
+  border: 2px solid #703777;
+  padding: 10px;
+}
+
+.thumbnail-container img {
+  width: 100%;
+}
+
+.modal-close {
+  justify-self: center;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.item-title {
+  text-align: center;
+  padding: 10px;
+}
+
+.item-instructions,
+.instruction-title {
+  text-align: center;
+  padding: 10px;
+}
+
+.instruction-text {
+  border-bottom: 2px solid #703777;
+  padding-bottom: 10px;
+}
+
+.ingredient-list {
+  text-align: center;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: inset 6px -2px 20px 0 black;
+  padding: 10px;
+}
+
+.ingredient-list li img {
+  width: 100%;
+}
+
+/* comment style */
+
+.comment-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comment-list {
+  font-size: 18px;
+  padding-top: 20px;
+}
+
+/* form style */
+
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-top: 2px solid #703777;
+  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.form-header-text {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: #703777;
+}
+
+input {
+  padding: 6px;
+  margin-bottom: 5px;
+  outline: none;
+  font-family: 'Aladin', cursive;
+  font-size: 18px;
+  border: 2px solid #703777;
+}
+
+.text-area {
+  font-size: 18px;
+  border: 2px solid #703777;
+  padding-left: 5px;
+}
+
+.form-submit {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  background: #703777;
+  color: #fff;
+}
