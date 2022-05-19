@@ -53,6 +53,7 @@ const getPopUpInfo = async (id) => {
 
   /** form */
   formContainer.innerHTML = `
+  <p class=form-header-text>Add a Comment</p>
   <form>
           <input class="name-input" type="text" placeholder="Your name">
           <textarea class="text-area" cols="30" rows="10" placeholder="Your insights"></textarea>

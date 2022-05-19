@@ -23,7 +23,7 @@ const getComments = async (id) => {
 
 const commentCount = async (id) => {
   const data = await getComments(id);
-  return data;
+  return data.length || '0';
 };
 
 export { postComment, getComments, commentCount };
