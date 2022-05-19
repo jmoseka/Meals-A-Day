@@ -70,7 +70,7 @@ const getPopUpInfo = async (id) => {
   const count = await commentCounter(formSubmit.id);
 
   const commentTotal = document.querySelector('.comment-total');
-  commentTotal.textContent = count;
+  commentTotal.textContent = `(${count})`;
 };
 
 export default getPopUpInfo;
