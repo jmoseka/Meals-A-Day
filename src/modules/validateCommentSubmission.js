@@ -1,6 +1,7 @@
-import postComment from './postComment.js';
+import postComment, { getComments } from './postComment.js';
+import viewComments from './viewComments.js';
 
-const validateCommentSubmission = (id) => {
+const validateCommentSubmission = async (id) => {
   const nameInput = document.querySelector('.name-input');
   const textAreaInput = document.querySelector('.text-area');
   const notice = document.querySelector('.notice');
@@ -10,9 +11,11 @@ const validateCommentSubmission = (id) => {
   if (!name || !text) {
     notice.classList.remove('hidden');
   } else {
-    postComment(id, name, text);
+    await postComment(id, name, text);
     nameInput.value = '';
     textAreaInput.value = '';
+    const comments = await getComments(id);
+    viewComments(comments);
   }
 };
 

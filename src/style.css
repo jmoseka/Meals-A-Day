@@ -39,6 +39,12 @@
   text-align: center;
 }
 
+.comment-list li {
+  list-style: none;
+}
+
+/** end */
+
 .header ul {
   display: flex;
   column-gap: 50px;
@@ -223,6 +229,18 @@ footer p a {
   width: 100%;
 }
 
+/* comment style */
+
+.comment-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comment-list {
+  font-size: 18px;
+}
+
 /* form style */
 
 .form-container {
@@ -243,8 +261,8 @@ input {
   padding: 6px;
   margin-bottom: 5px;
   outline: none;
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
+  font-family: 'Aladin', cursive;
+  font-size: 18px;
 }
 
 .text-area {

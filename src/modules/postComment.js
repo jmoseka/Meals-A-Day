@@ -15,4 +15,10 @@ const postComment = async (id, name, text) => {
   return response;
 };
 
+export const getComments = async (id) => {
+  const data = await fetch(`${baseUrl}?item_id=${id}`);
+  const result = data.json();
+  return result;
+};
+
 export default postComment;
