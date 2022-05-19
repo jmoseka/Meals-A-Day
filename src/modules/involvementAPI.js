@@ -15,10 +15,15 @@ const postComment = async (id, name, text) => {
   return response;
 };
 
-export const getComments = async (id) => {
+const getComments = async (id) => {
   const data = await fetch(`${baseUrl}?item_id=${id}`);
   const result = data.json();
   return result;
 };
 
-export default postComment;
+const commentCounter = async (id) => {
+  const data = await getComments(id);
+  return data.length;
+};
+
+export { postComment, getComments, commentCounter };
