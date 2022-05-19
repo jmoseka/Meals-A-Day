@@ -229,7 +229,7 @@ footer p a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  box-shadow: inset 6px -2px 20px 0px black;
+  box-shadow: inset 6px -2px 20px 0 black;
   padding: 10px;
 }
 
