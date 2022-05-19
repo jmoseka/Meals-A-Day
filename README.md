@@ -2,7 +2,10 @@
 
 >> JavaScript capstone project - API-based webapp
 
-In this project we built a web application that consumes the [MealDB API](https://www.themealdb.com/api.php). 
+In this project we built a web application that consumes the [MealDB API](https://www.themealdb.com/api.php).
+
+![meal-a-day-final](https://user-images.githubusercontent.com/98121137/169287798-99c95faf-b951-4162-8851-190bc94f3538.gif)
+
 
 ## Project Features
 
