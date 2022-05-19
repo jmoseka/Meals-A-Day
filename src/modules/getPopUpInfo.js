@@ -1,5 +1,5 @@
 import validateCommentSubmission from './validateCommentSubmission.js';
-import { getComments } from './postComment.js';
+import { getComments, commentCounter } from './involvementAPI.js';
 import viewComments from './viewComments.js';
 
 const getPopUpInfo = async (id) => {
@@ -67,6 +67,10 @@ const getPopUpInfo = async (id) => {
   /** view comments */
   const commentPosted = await getComments(formSubmit.id);
   viewComments(commentPosted);
+  const count = await commentCounter(formSubmit.id);
+
+  const commentTotal = document.querySelector('.comment-total');
+  commentTotal.textContent = count;
 };
 
 export default getPopUpInfo;
