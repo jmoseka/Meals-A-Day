@@ -1,2 +1,2 @@
-const commentCounter = (data) => data.length;
+const commentCounter = (data) => data.length || '0';
 export default commentCounter;

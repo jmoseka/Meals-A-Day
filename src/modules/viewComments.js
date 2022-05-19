@@ -1,3 +1,5 @@
+import commentCounter from './commentCounter.js';
+
 const viewComments = (postedComments) => {
   const data = postedComments;
   const commentList = document.querySelector('.comment-list');
@@ -11,6 +13,9 @@ const viewComments = (postedComments) => {
       commentList.append(element);
     });
   }
+
+  const commentTotal = document.querySelector('.comment-total');
+  commentTotal.textContent = `(${commentCounter(data)})`;
 };
 
 export default viewComments;

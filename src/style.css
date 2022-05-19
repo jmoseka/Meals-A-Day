@@ -35,7 +35,6 @@
 .ingredient-list li {
   width: 80px;
   height: auto;
-  border: 1px solid gray;
   text-align: center;
 }
 
@@ -191,6 +190,8 @@ footer p a {
 .thumbnail-container {
   width: 300px;
   height: auto;
+  border: 2px solid #703777;
+  padding: 10px;
 }
 
 .thumbnail-container img {
@@ -217,12 +218,19 @@ footer p a {
   padding: 10px;
 }
 
+.instruction-text {
+  border-bottom: 2px solid #703777;
+  padding-bottom: 10px;
+}
+
 .ingredient-list {
   text-align: center;
   list-style: none;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  box-shadow: inset 6px -2px 20px 0 black;
+  padding: 10px;
 }
 
 .ingredient-list li img {
@@ -239,6 +247,7 @@ footer p a {
 
 .comment-list {
   font-size: 18px;
+  padding-top: 20px;
 }
 
 /* form style */
@@ -249,6 +258,8 @@ footer p a {
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  border-top: 2px solid #703777;
+  margin-top: 20px;
 }
 
 form {
@@ -257,16 +268,25 @@ form {
   width: 70%;
 }
 
+.form-header-text {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: #703777;
+}
+
 input {
   padding: 6px;
   margin-bottom: 5px;
   outline: none;
   font-family: 'Aladin', cursive;
   font-size: 18px;
+  border: 2px solid #703777;
 }
 
 .text-area {
   font-size: 18px;
+  border: 2px solid #703777;
+  padding-left: 5px;
 }
 
 .form-submit {
@@ -275,4 +295,5 @@ input {
   font-size: 18px;
   border: none;
   background: #703777;
+  color: #fff;
 }

@@ -1,12 +1,12 @@
 import commentCounter from '../modules/commentCounter.js';
 
-describe('Returns number of items on the homepage', () => {
-  it('returns 0 if the meals array is empty', () => {
+describe('Returns number of comments on a meal item', () => {
+  it('returns 0 if the comments array is empty', () => {
     const commentList = [];
     expect(commentCounter(commentList)).toBe(0);
   });
 
-  it('returns the number of meals in the mealsArray ', () => {
+  it('returns the number of comments for a meal item ', () => {
     const commentList = [
       {
         item_id: 'abc123',

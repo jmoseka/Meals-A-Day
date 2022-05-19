@@ -21,9 +21,4 @@ const getComments = async (id) => {
   return result;
 };
 
-const commentCount = async (id) => {
-  const data = await getComments(id);
-  return data;
-};
-
-export { postComment, getComments, commentCount };
+export { postComment, getComments };
