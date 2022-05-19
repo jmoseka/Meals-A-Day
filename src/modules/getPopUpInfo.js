@@ -1,6 +1,7 @@
 import validateCommentSubmission from './validateCommentSubmission.js';
-import { getComments, commentCounter } from './involvementAPI.js';
+import { getComments, commentCount } from './involvementAPI.js';
 import viewComments from './viewComments.js';
+import commentCounter from './commentCounter.js';
 
 const getPopUpInfo = async (id) => {
   const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
@@ -67,10 +68,10 @@ const getPopUpInfo = async (id) => {
   /** view comments */
   const commentPosted = await getComments(formSubmit.id);
   viewComments(commentPosted);
-  const count = await commentCounter(formSubmit.id);
+  const count = await commentCount(formSubmit.id);
 
   const commentTotal = document.querySelector('.comment-total');
-  commentTotal.textContent = `(${count})`;
+  commentTotal.textContent = `(${commentCounter(count)})`;
 };
 
 export default getPopUpInfo;
