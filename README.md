@@ -6,6 +6,8 @@ In this project we built a web application that consumes the [MealDB API](https:
 
 ![meal-a-day-final](https://user-images.githubusercontent.com/98121137/169287798-99c95faf-b951-4162-8851-190bc94f3538.gif)
 
+## 🔴 [LIVE LINK](https://jmoseka.github.io/Meals-A-Day/)
+
 
 ## Project Features
 
