@@ -1,4 +1,4 @@
-import {postComment, getComments } from './involvementAPI.js';
+import { postComment, getComments } from './involvementAPI.js';
 import viewComments from './viewComments.js';
 
 const validateCommentSubmission = async (id) => {
