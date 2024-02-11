@@ -88,6 +88,8 @@ footer p a {
 .meals {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 30px;
   margin: 30px 0 30px 30px;
