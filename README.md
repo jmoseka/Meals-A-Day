@@ -63,9 +63,15 @@ $ open dist/index.html
 
 - GitHub: [@jmoseka](https://github.com/jmoseka)
 
-## 🤝 Contributing
+## 🤝 Contribution
 
-Contributions, issues and feature requests are welcome!
+👤 **Daniel Asakpa**
+
+[@danielasakpa](https://github.com/danielaskpa)
+
+- Centered the style of the meals list for improved visual presentation
+
+  [feat: Centering Meals List Style](https://github.com/jmoseka/Meals-A-Day/pull/37)
 
 ## Show your support
 
